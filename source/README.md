@@ -14,6 +14,6 @@ Chứa logic xử lý và phân tích chính của đồ án. Hiện mới có c
 
 Luồng xử lý: `preprocessing` → `preparation` → `descriptive` / `inference` / `forecasting`. Các nhánh phân tích dùng dữ liệu thích hợp với cấp quan sát của mình.
 
-Tên file theo chức năng, không theo số chương. Dùng đường dẫn theo repo hoặc tham số; notebook gọi lại logic từ đây. Đầu ra dữ liệu đặt trong `data/processed/`, bảng kết quả trong `results/`, hình trong `figures/`.
+Tên file theo chức năng, không theo số chương. Dùng đường dẫn theo repo hoặc tham số; notebook gọi lại logic từ đây. Dữ liệu raw/clean được tải từ các link trong `data/README.md`; đường dẫn dữ liệu đầu vào và đầu ra được cấu hình khi chạy. Bảng kết quả đặt trong `results/`, hình trong `figures/`.
 
 [Quay lại README tổng](../README.md)

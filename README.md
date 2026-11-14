@@ -6,7 +6,7 @@ Repository phục vụ đồ án của **Nhóm 8**, môn **IS403**, lớp **R14*
 
 ### Trạng thái repository
 
-Repo đang ở giai đoạn khởi tạo cấu trúc. Mã nguồn, dữ liệu, bảng kết quả, biểu đồ và báo cáo sẽ được bổ sung theo từng bước sau khi chuẩn hóa. Các thư mục dưới đây xác định cách tổ chức sản phẩm; chưa thể chạy toàn bộ quy trình chỉ từ bản khởi tạo này.
+Repo đang ở giai đoạn khởi tạo cấu trúc. Mã nguồn, bảng kết quả, biểu đồ và báo cáo sẽ được bổ sung theo từng bước sau khi chuẩn hóa. Dữ liệu raw và clean được phân phối qua Google Drive. Các thư mục dưới đây xác định cách tổ chức sản phẩm; chưa thể chạy toàn bộ quy trình chỉ từ bản khởi tạo này.
 
 ## 1. Mục tiêu và phạm vi
 
@@ -27,9 +27,9 @@ Biến dự báo là **số EV hiện có ở cuối tháng**, đơn vị xe. Th
 - [Hai file dữ liệu gốc — raw](https://drive.google.com/drive/folders/1Bp67CYHvmcQcsPUAWl13ZHT_P1s3bWib?usp=sharing)
 - [Hai file dữ liệu đã làm sạch — clean](https://drive.google.com/drive/folders/1YvG-HDCbabV6dt6lo1BkaxUJd-wX4qTq?usp=sharing)
 
-Các liên kết cung cấp phiên bản dữ liệu dùng cho đồ án. Trong quá trình làm việc tại máy, đặt dữ liệu theo cấu trúc sau; CSV hiện chưa được đưa vào repo mới.
+Các liên kết cung cấp phiên bản dữ liệu dùng cho đồ án. Thư mục `data/` chỉ chứa README giới thiệu dữ liệu và link tải, không lưu các CSV. Khi chạy chương trình tại máy, tải dữ liệu về vị trí do người dùng chọn và truyền đường dẫn đầu vào/đầu ra theo hướng dẫn của từng gói.
 
-| Bộ dữ liệu | File gốc trong `data/raw/` | File clean trong `data/processed/` | Kích thước raw → clean |
+| Bộ dữ liệu | File gốc trên Drive raw | File clean trên Drive clean | Kích thước raw → clean |
 |---|---|---|---|
 | Population | `Electric_Vehicle_Population_Data.csv` | `EV_Population_Washington_Clean.csv` | 135.038 × 17 → 134.726 × 11 |
 | History | `Electric_Vehicle_Population_Size_History_By_County.csv` | `EV_Population_History_Washington_Clean.csv` | 19.700 × 10 → 6.474 × 10 |
@@ -40,7 +40,7 @@ Nếu file tải về mang hậu tố như `EV_Population_Washington_Clean (1).c
 
 ### Dữ liệu dẫn xuất
 
-`data/processed/` còn chứa các bảng do chương trình chuẩn bị dữ liệu tạo ra:
+Chương trình chuẩn bị dữ liệu sẽ tạo các bảng dẫn xuất tại đường dẫn đầu ra được cấu hình khi chạy:
 
 - `statewide_monthly.csv`: chuỗi toàn bang 83 tháng, từ 01/2017 đến 11/2023.
 - Các mẫu phục vụ kiểm định Range, CAFV, cơ cấu BEV/PHEV và tỷ lệ EV theo quận.
@@ -53,8 +53,7 @@ History clean vẫn giữ 6.474 quan sát chi tiết. Chuỗi 83 tháng là sả
 IS403.R14.Group8/
 ├── README.md
 ├── data/
-│   ├── raw/
-│   └── processed/
+│   └── README.md
 ├── source/
 │   ├── preprocessing/
 │   ├── preparation/
@@ -81,8 +80,7 @@ IS403.R14.Group8/
 
 | Vị trí | Nội dung và trách nhiệm |
 |---|---|
-| `data/raw/` | Hai CSV gốc, giữ nguyên nội dung |
-| `data/processed/` | Hai CSV clean và dữ liệu dẫn xuất dùng cho phân tích/dự báo |
+| `data/` | README mô tả dữ liệu và hai link Drive raw/clean |
 | `source/preprocessing/` | Làm sạch hai raw để tạo hai clean; kiểm tra chất lượng đầu ra |
 | `source/preparation/` | Tạo mẫu kiểm định, tổng hợp chuỗi tháng và xác định train/test |
 | `source/descriptive/` | Thống kê mô tả đặc điểm xe, địa bàn và diễn biến theo thời gian |
@@ -107,7 +105,7 @@ IS403.R14.Group8/
 5. **Dự báo:** lựa chọn cấu hình trong tập huấn luyện, dự báo 12 bước từ cùng một gốc và đánh giá bằng cùng công thức.
 6. **Tổng hợp:** tạo bảng so sánh, phân tích sai số và xuất hình/bảng cho báo cáo.
 
-CSV sạch và mẫu phân tích đặt trong `data/processed/`. Bảng thống kê, kiểm định, CV và dự báo đặt trong `results/`; biểu đồ đặt trong `figures/`.
+CSV sạch và mẫu phân tích được lưu tại đường dẫn đầu ra do người chạy cấu hình. Bảng thống kê, kiểm định, CV và dự báo đặt trong `results/`; biểu đồ đặt trong `figures/`.
 
 ## 5. Thiết kế phân tích và dự báo
 
@@ -156,7 +154,7 @@ Tập kiểm tra dùng để đánh giá cuối. Việc tạo đặc trưng, chu
 
 Hiện mới có cấu trúc thư mục và README; chưa có lệnh chạy pipeline khả dụng trong repo này. Khi bổ sung từng gói, tài liệu sẽ ghi rõ dependency, lệnh chạy từ thư mục gốc, đường dẫn đầu vào và danh sách đầu ra thực tế.
 
-- Giữ nguyên dữ liệu trong `data/raw/`; ghi đầu ra vào thư mục được quy định.
+- Giữ nguyên nội dung raw tải từ Drive; cấu hình đường dẫn nguồn và đầu ra riêng khi chạy, tránh ghi đè file gốc.
 - Dùng đường dẫn tương đối theo repo hoặc tham số đầu vào, tránh gắn code với đường dẫn máy cá nhân.
 - Tập trung logic xử lý trong `source/`; notebook gọi lại logic đó để trình bày.
 - Sinh bảng/hình từ code và kết quả lưu, tránh chép cứng số liệu trong chương trình dựng báo cáo.

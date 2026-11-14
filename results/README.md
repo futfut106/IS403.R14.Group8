@@ -12,6 +12,6 @@ Lưu đầu ra dạng CSV/JSON được tạo từ mã nguồn. Hiện chưa có
 
 Các bảng phải truy được tới script và dữ liệu đầu vào; không sửa tay kết quả để khớp báo cáo. Dự báo và metric lưu đủ độ chính xác, chỉ làm tròn khi trình bày. Các model được so sánh trên cùng ngày và actual; ghi rõ origin, horizon, config và công thức đánh giá.
 
-Dữ liệu clean/mẫu đầu vào thuộc `data/processed/`; hình thuộc `figures/`; báo cáo thuộc `reports/`.
+Dữ liệu raw/clean được tải qua các link trong `data/README.md`; dữ liệu và mẫu phân tích được đọc/ghi theo đường dẫn cấu hình khi chạy. Hình thuộc `figures/`; báo cáo thuộc `reports/`.
 
 [Quay lại README tổng](../README.md)
