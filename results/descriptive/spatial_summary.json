@@ -1,0 +1,39 @@
+{
+  "population": {
+    "rows": 134726,
+    "counties": 39,
+    "distinct_city_names": 454,
+    "county_city_pairs": 493,
+    "missing_city_rows": 0,
+    "city_names_in_multiple_counties": 38,
+    "county_top_3_share_pct": 71.63427994596441,
+    "county_top_5_share_pct": 81.16621884417262,
+    "county_top_10_share_pct": 91.77515846978312,
+    "city_pair_median_count": 18.0,
+    "city_pairs_under_10_vehicles": 203,
+    "city_pairs_with_one_vehicle": 60,
+    "snapshot_date": null
+  },
+  "history_snapshot": {
+    "date": "2023-11-30",
+    "source_rows": 78,
+    "counties": 39,
+    "ev_total": 159478,
+    "total_vehicles": 5954054,
+    "statewide_ev_pct": 2.678477554956673,
+    "use_groups": [
+      "Passenger",
+      "Truck"
+    ]
+  },
+  "definitions": {
+    "population_share_denominator": "All Population clean rows; no History denominator is joined to Population.",
+    "city_key": [
+      "County",
+      "City"
+    ],
+    "history_ev_pct": "100 * EV / Total Vehicles after summing Passenger and Truck within each county at the selected month.",
+    "population_snapshot_date": "Not inferred from Model Year; not assumed equal to the selected History date.",
+    "rank_ties": "Population display order breaks ties alphabetically; History ranks use minimum rank for equal values."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.18.1"
+  },
+  "input_files": [
+    "range_analysis_sample.csv",
+    "cafv_analysis_sample.csv",
+    "county_vehicle_type_counts.csv",
+    "county_ev_snapshots.csv"
+  ],
+  "nominal_alpha": 0.05,
+  "multiple_testing": "Unadjusted per-test p-values; no familywise/FDR control is claimed. Sensitivity analyses do not select the preferred conclusion.",
+  "range": {
+    "primary_rows": 77857,
+    "year_le_2020_rows": 65779,
+    "population_rows": 134726,
+    "missing_range_rows": 56869,
+    "h1_method": "Two-sided asymptotic Mann-Whitney U; tie correction and continuity correction; first group=BEV.",
+    "h1_effect": "A=U_BEV/(n_BEV*n_PHEV); rank-biserial=2*A-1.",
+    "h2_method": "Two-sided Spearman; asymptotic t approximation; all valid pairs and separate BEV/PHEV analyses.",
+    "quartiles": "Linear interpolation on valid Range values."
+  },
+  "cafv": {
+    "primary_rows": 77858,
+    "sensitivity_rows": 134726,
+    "unknown_label": "Eligibility unknown as battery range has not been researched",
+    "correction": false
+  },
+  "county": {
+    "h4a_primary": "All 39 counties; Monte Carlo fixed-margin Pearson chi-square.",
+    "h4a_sensitivity": "Exclude counties with fewer than 30 EV; use asymptotic chi-square only when all expected cells >=5, otherwise Monte Carlo.",
+    "excluded_in_sensitivity": [
+      "Columbia",
+      "Ferry",
+      "Garfield"
+    ],
+    "h4b_primary_date": "2023-11-30",
+    "h4b_sensitivity_date": "2017-01-31",
+    "h4b_sample_unit": "Vehicle counts in each separate month; do not pool months as independent vehicles."
+  },
+  "monte_carlo": {
+    "n_resamples": 99999,
+    "batch": 1000,
+    "seed": 42,
+    "sampling": "SciPy random_table conditional on fixed row and column margins.",
+    "resolution": 1e-05,
+    "df_reporting": "Theoretical (rows-1)*(columns-1); SciPy resampling dof is not used.",
+    "floor_interpretation": "At the minimum estimate, report the finite simulation resolution, not p=0 or an upper bound on the true p-value."
+  },
+  "p_underflow": "When SciPy returns numerical zero, leave p_value empty, mark p_numerical_underflow and report <1e-300; no exact p=0 claim.",
+  "limitations": [
+    "Administrative observational records do not establish causality.",
+    "Range availability differs by vehicle type and model year; valid Range records are not a complete representation of every group.",
+    "Statistical significance does not by itself measure business importance or justify policy effects."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "full_train_months": 71,
+  "full_train_supervised_rows": 64,
+  "feature_names": [
+    "r_lag_1",
+    "r_lag_2",
+    "r_lag_3",
+    "r_mean_3",
+    "r_mean_6"
+  ],
+  "fold_shapes": [
+    {
+      "train_months": 47,
+      "supervised_rows": 40
+    },
+    {
+      "train_months": 53,
+      "supervised_rows": 46
+    },
+    {
+      "train_months": 59,
+      "supervised_rows": 52
+    }
+  ],
+  "prefix_features_match_full_series_prefix": true,
+  "prefix_features_unchanged_by_future_actual_mutation": true,
+  "validation_stays_within_train": true,
+  "zero_error_and_zero_denominator_metric_check": true,
+  "scope": "These checks cover the declared boundaries/features; they do not prove absence of every possible form of leakage."
+}
