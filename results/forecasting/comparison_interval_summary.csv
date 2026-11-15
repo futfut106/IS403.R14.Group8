@@ -1,0 +1,3 @@
+﻿model,config_id,n_test,nominal_level,covered_months,observed_coverage,mean_width
+ARIMA,ARIMA_222,12,0.95,12,1.0,21572.758687867048
+SARIMA,SARIMA_C,12,0.95,12,1.0,17580.088759742295
