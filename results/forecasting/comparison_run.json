@@ -49,7 +49,7 @@
     "prediction_interval_alpha": 0.05,
     "seed": 42
   },
-  "python": "3.12.14",
+  "python": "3.12.10",
   "input_files": [
     "statewide_monthly.csv",
     "forecast_baselines.csv",
@@ -93,7 +93,7 @@
   "lowest_test_rmse": {
     "model": "SARIMA",
     "config_id": "SARIMA_C",
-    "rmse": 2354.9009444669796
+    "rmse": 2354.9007775727227
   },
   "checks_completed": [
     "Prepared monthly series schema and dates validated.",

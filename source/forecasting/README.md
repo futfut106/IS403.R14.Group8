@@ -244,9 +244,9 @@ Bốn hình: `comparison_accuracy.png` (RMSE/MAE), `comparison_forecasts.png` (t
 
 ### Cách đọc kết quả đi kèm
 
-Theo RMSE của **cửa sổ test này**, thứ tự là SARIMA C (2354.900944), ARIMA(2,2,2) (2730.963238), XGBoost (5064.830985), RF (5243.320964), Ridge (5325.824073), SVR (6020.980986), Drift (18606.539282) và Naive (28162.950452) xe.
+Theo RMSE của **cửa sổ test này**, thứ tự là SARIMA C (2354.900778), ARIMA(2,2,2) (2730.715887), XGBoost (5064.830985), RF (5243.320964), Ridge (5325.824073), SVR (6020.980986), Drift (18606.539282) và Naive (28162.950452) xe.
 
-SARIMA C có MAE 1771.095942 xe, sMAPE 1.217804%, giảm RMSE 91.6383% so với Naive và 87.3437% so với Drift. Đây là mức giảm **sai số dự báo**, không phải tăng doanh thu, lợi nhuận hoặc hiệu quả chính sách. ARIMA có Bias tuyệt đối nhỏ hơn SARIMA trong cửa sổ này; thứ hạng RMSE không có nghĩa mọi chỉ tiêu đều trội hơn. Ridge có MAE/sMAPE thấp hơn XGBoost/RF dù RMSE cao hơn, nên cần đọc từng chỉ tiêu theo ý nghĩa của nó.
+SARIMA C có MAE 1771.095823 xe, sMAPE 1.217804%, giảm RMSE 91.6383% so với Naive và 87.3437% so với Drift. Đây là mức giảm **sai số dự báo**, không phải tăng doanh thu, lợi nhuận hoặc hiệu quả chính sách. ARIMA có Bias tuyệt đối nhỏ hơn SARIMA trong cửa sổ này; thứ hạng RMSE không có nghĩa mọi chỉ tiêu đều trội hơn. Ridge có MAE/sMAPE thấp hơn XGBoost/RF dù RMSE cao hơn, nên cần đọc từng chỉ tiêu theo ý nghĩa của nó.
 
 ML có sai số validation thấp hơn SARIMA trong ba fold nhưng không giữ thứ hạng đó ở test. Không lấy chênh lệch này làm bằng chứng mô hình phi tuyến luôn tốt/xấu hơn hoặc tự khẳng định nguyên nhân thay đổi cơ chế tăng trưởng. Các fold validation chồng lấn; ba điểm trung bình không phải ba mẫu độc lập. ARIMA được chọn bằng AIC train, các họ còn lại bằng RMSE validation: **không so trực tiếp số AIC với số RMSE trong cột selection_value**.
 
