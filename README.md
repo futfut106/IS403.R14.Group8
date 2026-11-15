@@ -6,7 +6,7 @@ Repository phục vụ đồ án của **Nhóm 8**, môn **IS403**, lớp **R14*
 
 ### Trạng thái repository
 
-Repo đang ở giai đoạn khởi tạo cấu trúc. Mã nguồn, bảng kết quả, biểu đồ và báo cáo sẽ được bổ sung theo từng bước sau khi chuẩn hóa. Dữ liệu raw và clean được phân phối qua Google Drive. Các thư mục dưới đây xác định cách tổ chức sản phẩm; chưa thể chạy toàn bộ quy trình chỉ từ bản khởi tạo này.
+Repo đã có mã tiền xử lý, chuẩn bị dữ liệu, thống kê mô tả, kiểm định H1–H4, dự báo và so sánh tám phương pháp. Thư mục notebooks có 10 notebook với output đã chạy và lưu. Bảng/hình của lượt chạy bằng Python 3.12.10 nằm trong results/ và figures/. Dữ liệu raw/clean được tải qua Google Drive; báo cáo và yêu cầu R cần được hoàn thiện riêng.
 
 ## 1. Mục tiêu và phạm vi
 
@@ -94,7 +94,7 @@ IS403.R14.Group8/
 | `reports/` | Báo cáo Word, PDF và mục lục chính thức |
 | `docs/` | Từ điển dữ liệu, hướng dẫn chạy, kế hoạch và ánh xạ báo cáo với code/bảng/hình |
 
-`requirements.txt` và `.gitignore` sẽ được bổ sung khi thiết lập môi trường và đưa các gói mã nguồn vào repo. Không liệt kê chúng như những file đã có ở bản khởi tạo.
+`requirements.txt` ghi phiên bản thư viện của lượt chạy đi kèm; `.gitignore` loại cache và file tạm. Dependency cho notebook nằm trong `notebooks/requirements-demo.txt`.
 
 ## 4. Luồng triển khai
 
@@ -152,7 +152,7 @@ Tập kiểm tra dùng để đánh giá cuối. Việc tạo đặc trưng, chu
 
 ## 7. Hướng dẫn sử dụng và quy ước làm việc
 
-Hiện mới có cấu trúc thư mục và README; chưa có lệnh chạy pipeline khả dụng trong repo này. Khi bổ sung từng gói, tài liệu sẽ ghi rõ dependency, lệnh chạy từ thư mục gốc, đường dẫn đầu vào và danh sách đầu ra thực tế.
+Dùng Python 3.12.10. Xem lệnh chạy và đầu vào/đầu ra trong README của [preprocessing](source/preprocessing/README.md), [preparation](source/preparation/README.md), [descriptive](source/descriptive/README.md), [inference](source/inference/README.md) và [forecasting](source/forecasting/README.md). Để chạy từng ô khi demo, làm theo [hướng dẫn notebook](notebooks/README.md). Dữ liệu CSV phải tải và cấu hình ở ngoài repo trước khi chạy.
 
 - Giữ nguyên nội dung raw tải từ Drive; cấu hình đường dẫn nguồn và đầu ra riêng khi chạy, tránh ghi đè file gốc.
 - Dùng đường dẫn tương đối theo repo hoặc tham số đầu vào, tránh gắn code với đường dẫn máy cá nhân.
@@ -163,4 +163,4 @@ Hiện mới có cấu trúc thư mục và README; chưa có lệnh chạy pipe
 - Cập nhật README, hướng dẫn chạy và mapping khi thay đổi tên file hoặc giao diện dữ liệu.
 - Mỗi commit tập trung một phần công việc đã kiểm tra; chuyển từng gói vào repo theo tiến độ được thống nhất.
 
-Các phần mô tả thiết kế trong README là phạm vi triển khai đã thống nhất, không thay cho bằng chứng thực thi hoặc kết quả cuối. Trạng thái và hướng dẫn sẽ được cập nhật cùng từng gói mã nguồn.
+Kết quả đi kèm mô tả phiên bản dữ liệu và một cửa sổ test cố định; không phải cam kết về dự báo tương lai hoặc tác động nhân quả. Các cảnh báo và giới hạn được giữ trong README từng phần và hồ sơ kết quả.

@@ -1,5 +1,5 @@
 ﻿model,config_id,train_end,train_months,selection_metric,selection_value,cv_folds,n_supervised,wald_inference_caution,selection_rule
-ARIMA,ARIMA_222,2022-11-30,71,train_AIC,1052.0035625723528,0,,True,"lowest train AIC among converged finite candidates; same d=2, trend and likelihood settings"
+ARIMA,ARIMA_222,2022-11-30,71,train_AIC,1052.003586512154,0,,True,"lowest train AIC among converged finite candidates; same d=2, trend and likelihood settings"
 SARIMA,SARIMA_C,2022-11-30,71,mean_validation_RMSE,2342.296304888842,3,,False,lowest mean full-precision RMSE over three train-only validation folds; all folds and full-train fit must converge
 Ridge,RIDGE03,2022-11-30,71,mean_validation_RMSE,815.7937028800417,3,64,,"Within 1% of minimum mean validation RMSE, prefer larger alpha; then mean RMSE and config_id."
 Random Forest,RF05,2022-11-30,71,mean_validation_RMSE,814.1415081730999,3,64,,"Within 1% of minimum mean validation RMSE, prefer shallower trees, larger leaves, then mean RMSE and config_id."

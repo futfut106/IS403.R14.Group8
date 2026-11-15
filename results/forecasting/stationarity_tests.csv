@@ -1,13 +1,13 @@
 ﻿test,transformation,regression,series_n,test_nobs,statistic,p_value,p_relation,p_display,null_hypothesis,reject_h0_005,lags,critical_1pct,critical_5pct,critical_10pct,warnings
-ADF,level,c,71,67,2.360507416849173,0.9989904954276868,=,=0.9989905,unit root,False,3,-3.5319549603840894,-2.905755128523123,-2.5903569458676765,
+ADF,level,c,71,67,2.3605074168491726,0.9989904954276868,=,=0.9989905,unit root,False,3,-3.5319549603840894,-2.905755128523123,-2.5903569458676765,
 KPSS,level,c,71,71,1.2565159255354192,0.01,<,<0.01,level stationary,True,5,0.739,0.463,0.347,InterpolationWarning: The test statistic is outside of the range of p-values available in the look-up table. The actual p-value is smaller than the p-value returned.
-ADF,level,ct,71,67,1.4852941322131514,1.0,=,=1,unit root,False,3,-4.10066975794895,-3.478182141653062,-3.166589815070338,
+ADF,level,ct,71,67,1.4852941322131539,1.0,=,=1,unit root,False,3,-4.10066975794895,-3.478182141653062,-3.166589815070338,
 KPSS,level,ct,71,71,0.28184358493472633,0.01,<,<0.01,trend stationary,True,5,0.216,0.146,0.119,InterpolationWarning: The test statistic is outside of the range of p-values available in the look-up table. The actual p-value is smaller than the p-value returned.
-ADF,difference_1,c,70,67,0.12173099728021455,0.9675138318505216,=,=0.96751383,unit root,False,2,-3.5319549603840894,-2.905755128523123,-2.5903569458676765,
+ADF,difference_1,c,70,67,0.12173099728021462,0.9675138318505216,=,=0.96751383,unit root,False,2,-3.5319549603840894,-2.905755128523123,-2.5903569458676765,
 KPSS,difference_1,c,70,70,1.1317312514059406,0.01,<,<0.01,level stationary,True,4,0.739,0.463,0.347,InterpolationWarning: The test statistic is outside of the range of p-values available in the look-up table. The actual p-value is smaller than the p-value returned.
 ADF,difference_2,c,69,67,-12.487385602333699,2.997622692003847e-23,=,=2.9976227e-23,unit root,True,1,-3.5319549603840894,-2.905755128523123,-2.5903569458676765,
 KPSS,difference_2,c,69,69,0.3277906680975363,0.1,>,>0.1,level stationary,False,14,0.739,0.463,0.347,InterpolationWarning: The test statistic is outside of the range of p-values available in the look-up table. The actual p-value is greater than the p-value returned.
-ADF,difference_1_seasonal_12,c,58,57,-3.848027387422067,0.002452435020952688,=,=0.002452435,unit root,True,0,-3.5506699942762414,-2.913766394626147,-2.5946240473991997,
+ADF,difference_1_seasonal_12,c,58,57,-3.8480273874220665,0.002452435020952695,=,=0.002452435,unit root,True,0,-3.5506699942762414,-2.913766394626147,-2.5946240473991997,
 KPSS,difference_1_seasonal_12,c,58,58,0.35830620682404873,0.09512663498963417,=,=0.095126635,level stationary,False,4,0.739,0.463,0.347,
 ADF,difference_2_seasonal_12,c,57,56,-10.92920362461869,9.921762614499007e-20,=,=9.9217626e-20,unit root,True,0,-3.552928203580539,-2.9147306250000002,-2.595137155612245,
 KPSS,difference_2_seasonal_12,c,57,57,0.0952198064491053,0.1,>,>0.1,level stationary,False,7,0.739,0.463,0.347,InterpolationWarning: The test statistic is outside of the range of p-values available in the look-up table. The actual p-value is greater than the p-value returned.
