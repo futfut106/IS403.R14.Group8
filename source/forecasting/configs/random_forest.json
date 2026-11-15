@@ -1,0 +1,112 @@
+{
+  "selection": "Within 1% of minimum mean validation RMSE, prefer shallower trees, larger leaves, then mean RMSE and config_id.",
+  "relative_tolerance": 0.01,
+  "tie_keys": [
+    {
+      "column": "max_depth",
+      "ascending": true
+    },
+    {
+      "column": "min_samples_leaf",
+      "ascending": false
+    },
+    {
+      "column": "mean_rmse",
+      "ascending": true
+    },
+    {
+      "column": "config_id",
+      "ascending": true
+    }
+  ],
+  "candidates": [
+    {
+      "config_id": "RF01",
+      "n_estimators": 300,
+      "max_depth": 2,
+      "min_samples_leaf": 3,
+      "max_features": 0.7,
+      "bootstrap": true,
+      "criterion": "squared_error",
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    {
+      "config_id": "RF02",
+      "n_estimators": 300,
+      "max_depth": 2,
+      "min_samples_leaf": 3,
+      "max_features": 1.0,
+      "bootstrap": true,
+      "criterion": "squared_error",
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    {
+      "config_id": "RF03",
+      "n_estimators": 300,
+      "max_depth": 2,
+      "min_samples_leaf": 5,
+      "max_features": 0.7,
+      "bootstrap": true,
+      "criterion": "squared_error",
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    {
+      "config_id": "RF04",
+      "n_estimators": 300,
+      "max_depth": 2,
+      "min_samples_leaf": 5,
+      "max_features": 1.0,
+      "bootstrap": true,
+      "criterion": "squared_error",
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    {
+      "config_id": "RF05",
+      "n_estimators": 300,
+      "max_depth": 3,
+      "min_samples_leaf": 3,
+      "max_features": 0.7,
+      "bootstrap": true,
+      "criterion": "squared_error",
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    {
+      "config_id": "RF06",
+      "n_estimators": 300,
+      "max_depth": 3,
+      "min_samples_leaf": 3,
+      "max_features": 1.0,
+      "bootstrap": true,
+      "criterion": "squared_error",
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    {
+      "config_id": "RF07",
+      "n_estimators": 300,
+      "max_depth": 3,
+      "min_samples_leaf": 5,
+      "max_features": 0.7,
+      "bootstrap": true,
+      "criterion": "squared_error",
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    {
+      "config_id": "RF08",
+      "n_estimators": 300,
+      "max_depth": 3,
+      "min_samples_leaf": 5,
+      "max_features": 1.0,
+      "bootstrap": true,
+      "criterion": "squared_error",
+      "random_state": 42,
+      "n_jobs": 1
+    }
+  ]
+}

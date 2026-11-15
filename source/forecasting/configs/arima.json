@@ -1,0 +1,17 @@
+{
+  "family": "ARIMA",
+  "selection": "lowest train AIC among converged finite candidates; same d=2, trend and likelihood settings",
+  "trend": "n",
+  "enforce_stationarity": true,
+  "enforce_invertibility": true,
+  "maxiter": 500,
+  "optimizer": "lbfgs",
+  "candidates": [
+    {"config_id": "ARIMA_120", "order": [1,2,0]},
+    {"config_id": "ARIMA_220", "order": [2,2,0]},
+    {"config_id": "ARIMA_021", "order": [0,2,1]},
+    {"config_id": "ARIMA_121", "order": [1,2,1]},
+    {"config_id": "ARIMA_221", "order": [2,2,1]},
+    {"config_id": "ARIMA_222", "order": [2,2,2]}
+  ]
+}

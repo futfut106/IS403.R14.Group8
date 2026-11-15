@@ -1,0 +1,13 @@
+﻿model,config_id,date,origin,horizon,actual,pred,target_transform,evaluation_role,lower_95,upper_95,interval_level
+Random Forest,RF05,2022-12-31,2022-11-30,1,115665.0,115316.95929872183,level,selected,,,
+Random Forest,RF05,2023-01-31,2022-11-30,2,119377.0,118294.05782974837,level,selected,,,
+Random Forest,RF05,2023-02-28,2022-11-30,3,122322.0,121510.14768776436,level,selected,,,
+Random Forest,RF05,2023-03-31,2022-11-30,4,125478.0,124269.31996612473,level,selected,,,
+Random Forest,RF05,2023-04-30,2022-11-30,5,129728.0,127443.45245369941,level,selected,,,
+Random Forest,RF05,2023-05-31,2022-11-30,6,133975.0,130865.18129590093,level,selected,,,
+Random Forest,RF05,2023-06-30,2022-11-30,7,138353.0,133904.7943788334,level,selected,,,
+Random Forest,RF05,2023-07-31,2022-11-30,8,142537.0,137388.7268734382,level,selected,,,
+Random Forest,RF05,2023-08-31,2022-11-30,9,148730.0,141090.6512209089,level,selected,,,
+Random Forest,RF05,2023-09-30,2022-11-30,10,152690.0,144364.5538172137,level,selected,,,
+Random Forest,RF05,2023-10-31,2022-11-30,11,157161.0,148073.96729160473,level,selected,,,
+Random Forest,RF05,2023-11-30,2022-11-30,12,159478.0,152057.29770937588,level,selected,,,
