@@ -1,0 +1,88 @@
+{
+  "selection": "Minimum mean validation RMSE; exact ties use config_id. No unspecified simplicity rule.",
+  "relative_tolerance": 0.0,
+  "tie_keys": [
+    {
+      "column": "mean_rmse",
+      "ascending": true
+    },
+    {
+      "column": "config_id",
+      "ascending": true
+    }
+  ],
+  "candidates": [
+    {
+      "config_id": "SVR01",
+      "kernel": "rbf",
+      "C": 0.1,
+      "epsilon": 0.05,
+      "gamma": "scale",
+      "tol": 0.001,
+      "max_iter": -1
+    },
+    {
+      "config_id": "SVR02",
+      "kernel": "rbf",
+      "C": 0.1,
+      "epsilon": 0.1,
+      "gamma": "scale",
+      "tol": 0.001,
+      "max_iter": -1
+    },
+    {
+      "config_id": "SVR03",
+      "kernel": "rbf",
+      "C": 1.0,
+      "epsilon": 0.05,
+      "gamma": "scale",
+      "tol": 0.001,
+      "max_iter": -1
+    },
+    {
+      "config_id": "SVR04",
+      "kernel": "rbf",
+      "C": 1.0,
+      "epsilon": 0.1,
+      "gamma": "scale",
+      "tol": 0.001,
+      "max_iter": -1
+    },
+    {
+      "config_id": "SVR05",
+      "kernel": "rbf",
+      "C": 10.0,
+      "epsilon": 0.05,
+      "gamma": "scale",
+      "tol": 0.001,
+      "max_iter": -1
+    },
+    {
+      "config_id": "SVR06",
+      "kernel": "rbf",
+      "C": 10.0,
+      "epsilon": 0.1,
+      "gamma": "scale",
+      "tol": 0.001,
+      "max_iter": -1
+    },
+    {
+      "config_id": "SVR07",
+      "kernel": "linear",
+      "C": 1.0,
+      "epsilon": 0.1,
+      "gamma": "scale",
+      "tol": 0.001,
+      "max_iter": -1
+    },
+    {
+      "config_id": "SVR08",
+      "kernel": "linear",
+      "C": 10.0,
+      "epsilon": 0.1,
+      "gamma": "scale",
+      "tol": 0.001,
+      "max_iter": -1
+    }
+  ]
+}

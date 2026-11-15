@@ -1,0 +1,60 @@
+{
+  "model": "SVR",
+  "config": {
+    "config_id": "SVR02",
+    "kernel": "rbf",
+    "C": 0.1,
+    "epsilon": 0.1,
+    "gamma": "scale",
+    "tol": 0.001,
+    "max_iter": -1
+  },
+  "selection": "Minimum mean validation RMSE; exact ties use config_id. No unspecified simplicity rule.",
+  "relative_tolerance": 0.0,
+  "tie_keys": [
+    {
+      "column": "mean_rmse",
+      "ascending": true
+    },
+    {
+      "column": "config_id",
+      "ascending": true
+    }
+  ],
+  "train_end": "2022-11-30",
+  "target_fit_scale": "standardized_log_growth",
+  "export_scale": "vehicles",
+  "fit": {
+    "n_supervised": 64,
+    "feature_names": [
+      "r_lag_1",
+      "r_lag_2",
+      "r_lag_3",
+      "r_mean_3",
+      "r_mean_6"
+    ],
+    "x_standardized": true,
+    "x_mean": [
+      0.023069589577328686,
+      0.022966458974048753,
+      0.023109480872510024,
+      0.023048509807962483,
+      0.023116215447241482
+    ],
+    "x_scale": [
+      0.008676142576108522,
+      0.00859508671488483,
+      0.008556975270130922,
+      0.005964248242786096,
+      0.005054782290655944
+    ],
+    "target_mean": 0.023211058539127638,
+    "target_scale": 0.00873805634173506,
+    "target_variance": 7.635362863133628e-05,
+    "scaler_ddof": 0,
+    "converged": true,
+    "warnings": [],
+    "n_support": 58,
+    "support_fraction": 0.90625
+  }
+}

@@ -1,3 +1,13 @@
-# Dependencies used by the preprocessing, preparation and vehicle descriptive scripts.
+# Dependencies used by preprocessing, preparation, descriptive, inference and forecasting scripts.
 pandas==3.0.1
 matplotlib==3.11.2
+numpy==2.3.5
+scipy==1.18.1
+statsmodels==0.15.0
+patsy==1.0.3
+scikit-learn==1.9.1
+xgboost==3.4.1
+joblib==1.6.0
+threadpoolctl==3.8.0
+cloudpickle==3.1.2
+narwhals==2.28.0
