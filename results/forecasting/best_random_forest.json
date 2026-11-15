@@ -1,0 +1,63 @@
+{
+  "model": "Random Forest",
+  "config": {
+    "config_id": "RF05",
+    "n_estimators": 300,
+    "max_depth": 3,
+    "min_samples_leaf": 3,
+    "max_features": 0.7,
+    "bootstrap": true,
+    "criterion": "squared_error",
+    "random_state": 42,
+    "n_jobs": 1
+  },
+  "selection": "Within 1% of minimum mean validation RMSE, prefer shallower trees, larger leaves, then mean RMSE and config_id.",
+  "relative_tolerance": 0.01,
+  "tie_keys": [
+    {
+      "column": "max_depth",
+      "ascending": true
+    },
+    {
+      "column": "min_samples_leaf",
+      "ascending": false
+    },
+    {
+      "column": "mean_rmse",
+      "ascending": true
+    },
+    {
+      "column": "config_id",
+      "ascending": true
+    }
+  ],
+  "train_end": "2022-11-30",
+  "target_fit_scale": "standardized_log_growth",
+  "export_scale": "vehicles",
+  "fit": {
+    "n_supervised": 64,
+    "feature_names": [
+      "r_lag_1",
+      "r_lag_2",
+      "r_lag_3",
+      "r_mean_3",
+      "r_mean_6"
+    ],
+    "x_standardized": false,
+    "x_mean": null,
+    "x_scale": null,
+    "target_mean": 0.023211058539127638,
+    "target_scale": 0.00873805634173506,
+    "target_variance": 7.635362863133628e-05,
+    "scaler_ddof": 0,
+    "converged": null,
+    "warnings": [],
+    "feature_importances": [
+      0.1942564759007409,
+      0.13035950460995144,
+      0.3697335619716461,
+      0.14100725886895144,
+      0.16464319864871013
+    ]
+  }
+}
