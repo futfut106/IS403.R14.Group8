@@ -1,0 +1,14 @@
+﻿sample,source,rows,vehicle_count,counties,condition
+h1_primary,Population clean,77857,77857,39,electric_range is not missing
+h1_primary_bev,Population clean,46806,46806,39,valid Range; vehicle_type=BEV
+h1_primary_phev,Population clean,31051,31051,39,valid Range; vehicle_type=PHEV
+h1_sensitivity,Population clean,65779,65779,39,valid Range; Model Year <= 2020
+h2_primary,Population clean,77857,77857,39,Range and Model Year are not missing
+h2_bev,Population clean,46806,46806,39,valid Range/year; vehicle_type=BEV
+h2_phev,Population clean,31051,31051,39,valid Range/year; vehicle_type=PHEV
+h3_primary,Population clean,77858,77858,39,cafv_known=True
+h3_sensitivity,Population clean,134726,134726,39,"all CAFV labels, including Unknown"
+h4a_primary,Population clean,39,134726,39,all counties; rows are county aggregates
+h4a_sensitivity,Population clean,36,134683,36,county ev_total >= 30
+h4b_primary,History clean,39,5954054,39,date=2023-11-30; sum Passenger and Truck; test each month separately
+h4b_sensitivity,History clean,39,5940783,39,date=2017-01-31; sum Passenger and Truck; test each month separately

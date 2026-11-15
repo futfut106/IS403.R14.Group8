@@ -1,0 +1,36 @@
+{
+  "history_rows": 6474,
+  "counties": 39,
+  "use_groups": [
+    "Passenger",
+    "Truck"
+  ],
+  "rows_per_month": 78,
+  "monthly_rows": 83,
+  "first_month": "2017-01-31",
+  "last_month": "2023-11-30",
+  "train": {
+    "start": "2017-01-31",
+    "end": "2022-11-30",
+    "months": 71
+  },
+  "test": {
+    "start": "2022-12-31",
+    "end": "2023-11-30",
+    "months": 12
+  },
+  "columns": [
+    "date",
+    "bev",
+    "phev",
+    "ev_total",
+    "non_ev",
+    "total_vehicles",
+    "ev_pct",
+    "split"
+  ],
+  "count_unit": "vehicles",
+  "ev_pct_unit": "percent",
+  "aggregation": "Sum count columns across counties and both use groups; ev_pct = 100 * ev_total / total_vehicles.",
+  "features_created": false
+}
