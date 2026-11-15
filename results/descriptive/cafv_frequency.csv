@@ -1,0 +1,4 @@
+﻿cafv_status,count,share_pct,population_n,is_missing
+Clean Alternative Fuel Vehicle Eligible,61083,45.33868741000252,134726,False
+Eligibility unknown as battery range has not been researched,56868,42.21011534521919,134726,False
+Not eligible due to low battery range,16775,12.45119724477829,134726,False

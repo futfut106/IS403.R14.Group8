@@ -1,0 +1,3 @@
+# Dependencies used by the preprocessing, preparation and vehicle descriptive scripts.
+pandas==3.0.1
+matplotlib==3.11.2
