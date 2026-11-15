@@ -1,0 +1,32 @@
+{
+  "selection": "Within 1% of minimum mean validation RMSE, prefer larger alpha; then mean RMSE and config_id.",
+  "relative_tolerance": 0.01,
+  "tie_keys": [
+    {
+      "column": "alpha",
+      "ascending": false
+    },
+    {
+      "column": "mean_rmse",
+      "ascending": true
+    },
+    {
+      "column": "config_id",
+      "ascending": true
+    }
+  ],
+  "candidates": [
+    {
+      "config_id": "RIDGE01",
+      "alpha": 0.1
+    },
+    {
+      "config_id": "RIDGE02",
+      "alpha": 1.0
+    },
+    {
+      "config_id": "RIDGE03",
+      "alpha": 10.0
+    }
+  ]
+}

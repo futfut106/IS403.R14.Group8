@@ -1,0 +1,49 @@
+{
+  "config": {
+    "family": "SARIMA",
+    "selection": "lowest mean full-precision RMSE over three train-only validation folds; all folds and full-train fit must converge",
+    "aic_across_d_not_used_for_selection": true,
+    "trend": "n",
+    "enforce_stationarity": true,
+    "enforce_invertibility": true,
+    "maxiter": 500,
+    "optimizer": "lbfgs",
+    "config_id": "SARIMA_C",
+    "order": [
+      0,
+      2,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ]
+  },
+  "selection": "lowest mean full-precision RMSE over three train-only validation folds; all folds and full-train fit must converge",
+  "mean_cv_rmse": 2342.296304888842,
+  "train_fit": {
+    "config_id": "SARIMA_C",
+    "n_train_months": 71,
+    "train_start": "2017-01-31",
+    "train_end": "2022-11-30",
+    "aic": 879.5131875433684,
+    "bic": 885.6423413468721,
+    "log_likelihood": -436.7565937716842,
+    "converged": true,
+    "iterations": 21,
+    "loglikelihood_burn": 14,
+    "covariance_type": "opg",
+    "covariance_rank": 3,
+    "n_parameters": 3,
+    "covariance_condition_number": 329455383761.48645,
+    "covariance_rank_deficient": false,
+    "covariance_rank_definition": "NumPy default numerical rank of raw covariance, affected by parameter scales.",
+    "minimum_abs_ar_root": null,
+    "minimum_abs_ma_root": 1.0795867868455045,
+    "root_within_001_of_unit_circle": false,
+    "wald_inference_caution": false,
+    "warnings": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "family": "SARIMA",
+  "selection": "lowest mean full-precision RMSE over three train-only validation folds; all folds and full-train fit must converge",
+  "aic_across_d_not_used_for_selection": true,
+  "trend": "n",
+  "enforce_stationarity": true,
+  "enforce_invertibility": true,
+  "maxiter": 500,
+  "optimizer": "lbfgs",
+  "candidates": [
+    {"config_id": "SARIMA_A", "order": [1,1,1], "seasonal_order": [1,1,0,12]},
+    {"config_id": "SARIMA_B", "order": [0,1,1], "seasonal_order": [1,1,1,12]},
+    {"config_id": "SARIMA_C", "order": [0,2,1], "seasonal_order": [0,1,1,12]}
+  ]
+}
