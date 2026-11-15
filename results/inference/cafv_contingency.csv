@@ -1,0 +1,11 @@
+﻿hypothesis,sample,row_label,column_label,observed,expected,expected_lt_5,row_total,column_total,n
+H3,known_labels,BEV,Clean Alternative Fuel Vehicle Eligible,46796,36721.35038146369,False,46806,61083,77858
+H3,known_labels,BEV,Not eligible due to low battery range,10,10084.64961853631,False,46806,16775,77858
+H3,known_labels,PHEV,Clean Alternative Fuel Vehicle Eligible,14287,24361.64961853631,False,31052,61083,77858
+H3,known_labels,PHEV,Not eligible due to low battery range,16765,6690.350381463691,False,31052,16775,77858
+H3,including_unknown,BEV,Clean Alternative Fuel Vehicle Eligible,46796,47004.43078544601,False,103674,61083,134726
+H3,including_unknown,BEV,Not eligible due to low battery range,10,12908.654231551445,False,103674,16775,134726
+H3,including_unknown,BEV,Eligibility unknown as battery range has not been researched,56868,43760.91498300254,False,103674,56868,134726
+H3,including_unknown,PHEV,Clean Alternative Fuel Vehicle Eligible,14287,14078.569214553983,False,31052,61083,134726
+H3,including_unknown,PHEV,Not eligible due to low battery range,16765,3866.3457684485547,False,31052,16775,134726
+H3,including_unknown,PHEV,Eligibility unknown as battery range has not been researched,0,13107.085016997462,False,31052,56868,134726
