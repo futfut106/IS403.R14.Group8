@@ -1,3 +1,5 @@
-# Dependencies used by the preprocessing, preparation and vehicle descriptive scripts.
-pandas==3.0.1
+numpy==2.5.4
+pandas==3.1.0
 matplotlib==3.11.2
+statsmodels==0.15.0
+python-docx==1.2.0
